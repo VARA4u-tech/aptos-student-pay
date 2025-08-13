@@ -1,6 +1,6 @@
 import React from 'react';
 import { AptosWalletAdapterProvider } from '@aptos-labs/wallet-adapter-react';
-import { Network } from 'aptos';
+import { Network } from '@aptos-labs/ts-sdk';
 
 interface WalletProviderProps {
   children: React.ReactNode;
@@ -9,9 +9,13 @@ interface WalletProviderProps {
 export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   return (
     <AptosWalletAdapterProvider
-      autoConnect={true}
+      autoConnect={false}
       dappConfig={{
         network: Network.TESTNET,
+        aptosConnectDappId: "student-payment-tracker"
+      }}
+      onError={(error) => {
+        console.log("Wallet adapter error:", error);
       }}
     >
       {children}

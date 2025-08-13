@@ -17,16 +17,17 @@ const SignIn = () => {
   const handleConnect = async () => {
     try {
       if (!connected) {
-        await connect('Petra' as any);
+        await connect("Petra");
         toast({
           title: "Wallet Connected!",
           description: "Successfully connected to your Aptos wallet.",
         });
       }
     } catch (error) {
+      console.error('Wallet connection error:', error);
       toast({
         title: "Connection Failed",
-        description: "Failed to connect wallet. Please try again.",
+        description: "Please install Petra wallet or try again.",
         variant: "destructive",
       });
     }
@@ -117,7 +118,7 @@ const SignIn = () => {
                     <p className="font-medium">Wallet Status</p>
                     {connected ? (
                       <p className="text-sm text-secondary">
-                        Connected: {account?.address?.slice(0, 6)}...{account?.address?.slice(-4)}
+                        Connected: {account?.address?.toString().slice(0, 6)}...{account?.address?.toString().slice(-4)}
                       </p>
                     ) : (
                       <p className="text-sm text-muted-foreground">Not connected</p>

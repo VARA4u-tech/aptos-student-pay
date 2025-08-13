@@ -72,7 +72,7 @@ const Home = () => {
         totalAmount: parseFloat(totalAmount),
         transactionHash: `0x${Math.random().toString(16).substr(2, 64)}`,
         timestamp: new Date().toISOString(),
-        walletAddress: account?.address,
+        walletAddress: account?.address?.toString(),
       };
       
       localStorage.setItem('paymentData', JSON.stringify(paymentData));
@@ -115,7 +115,7 @@ const Home = () => {
           <div className="text-center">
             <h1 className="text-2xl font-bold">Payment Dashboard</h1>
             <p className="text-sm text-muted-foreground">
-              Connected: {account?.address?.slice(0, 6)}...{account?.address?.slice(-4)}
+              Connected: {account?.address?.toString().slice(0, 6)}...{account?.address?.toString().slice(-4)}
             </p>
           </div>
           
