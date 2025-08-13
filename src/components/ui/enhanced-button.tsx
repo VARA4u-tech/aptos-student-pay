@@ -14,10 +14,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        fintech: "fintech-button-primary rounded-xl font-semibold",
-        success: "fintech-button-secondary rounded-xl font-semibold",
+        fintech: "bg-gradient-to-r from-primary to-primary-light text-primary-foreground shadow-md hover:shadow-lg transform hover:scale-[1.02] rounded-xl font-semibold",
+        success: "bg-gradient-to-r from-secondary to-secondary-light text-secondary-foreground shadow-md hover:shadow-lg transform hover:scale-[1.02] rounded-xl font-semibold",
         wallet: "bg-gradient-to-r from-primary via-primary-light to-secondary text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] rounded-xl font-semibold",
-        payment: "bg-gradient-hero text-white shadow-glow hover:shadow-xl transform hover:scale-[1.02] rounded-xl font-bold text-base py-6",
+        payment: "bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] rounded-xl font-bold text-base py-6",
       },
       size: {
         default: "h-9 px-4 py-2",

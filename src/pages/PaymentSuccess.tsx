@@ -84,13 +84,13 @@ const PaymentSuccess = () => {
   };
 
   if (!paymentData) {
-    return <div className="min-h-screen bg-gradient-subtle flex items-center justify-center">
+    return <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center">
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
     </div>;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle p-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-4 flex items-center justify-center">
       <div className="w-full max-w-2xl space-y-6">
         {/* Success Header */}
         <div className="text-center space-y-4">
@@ -104,7 +104,7 @@ const PaymentSuccess = () => {
         </div>
 
         {/* Transaction Details */}
-        <Card className="fintech-card p-6 space-y-6">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Transaction Details</h2>
             <div className="px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full">
@@ -165,7 +165,7 @@ const PaymentSuccess = () => {
         </Card>
 
         {/* Fee Breakdown */}
-        <Card className="fintech-card p-6 space-y-4">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 space-y-4">
           <h3 className="text-lg font-semibold">Fee Breakdown</h3>
           
           <div className="space-y-3">

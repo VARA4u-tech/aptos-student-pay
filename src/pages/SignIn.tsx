@@ -70,14 +70,14 @@ const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
         {/* Hero Section */}
         <div className="text-center space-y-4">
-          <div className="mx-auto w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mb-6">
+          <div className="mx-auto w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center mb-6">
             <CreditCard className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Student Payment Tracker
           </h1>
           <p className="text-muted-foreground text-lg">
@@ -86,7 +86,7 @@ const SignIn = () => {
         </div>
 
         {/* Sign In Form */}
-        <Card className="fintech-card p-8 space-y-6">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-8 space-y-6">
           <div className="space-y-4">
             <EnhancedInput
               label="Student Name"

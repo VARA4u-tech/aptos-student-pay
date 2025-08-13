@@ -98,7 +98,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-4">
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
@@ -123,7 +123,7 @@ const Home = () => {
         </div>
 
         {/* Student Information */}
-        <Card className="fintech-card p-6 space-y-4">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 space-y-4">
           <div className="flex items-center space-x-2 mb-4">
             <School className="w-5 h-5 text-primary" />
             <h2 className="text-xl font-semibold">Student Information</h2>
@@ -147,7 +147,7 @@ const Home = () => {
         </Card>
 
         {/* Fee Breakdown */}
-        <Card className="fintech-card p-6 space-y-4">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 space-y-4">
           <div className="flex items-center space-x-2 mb-4">
             <Calculator className="w-5 h-5 text-primary" />
             <h2 className="text-xl font-semibold">Fee Breakdown</h2>
@@ -184,7 +184,7 @@ const Home = () => {
           
           <Separator />
           
-          <div className="bg-gradient-hero/5 rounded-xl p-4 border border-primary/20">
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-4 border border-primary/20">
             <div className="flex justify-between items-center">
               <span className="text-lg font-semibold">Total Amount</span>
               <span className="text-2xl font-bold text-primary">{totalAmount} APT</span>

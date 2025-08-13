@@ -31,7 +31,7 @@ const PaymentFailed = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-subtle p-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-4 flex items-center justify-center">
       <div className="w-full max-w-lg space-y-6">
         {/* Error Header */}
         <div className="text-center space-y-4">
@@ -45,7 +45,7 @@ const PaymentFailed = () => {
         </div>
 
         {/* Error Details */}
-        <Card className="fintech-card p-6 space-y-4">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6 space-y-4">
           <div className="flex items-center space-x-2">
             <AlertTriangle className="w-5 h-5 text-warning" />
             <h2 className="text-lg font-semibold">What happened?</h2>
@@ -65,7 +65,7 @@ const PaymentFailed = () => {
         </Card>
 
         {/* Auto Redirect Notice */}
-        <Card className="fintech-card p-4">
+        <Card className="bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-4">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
               Automatically redirecting to home in{' '}
