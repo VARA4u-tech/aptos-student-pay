@@ -5,11 +5,10 @@ import { EnhancedButton } from '@/components/ui/enhanced-button';
 import { EnhancedInput } from '@/components/ui/enhanced-input';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { Wallet, User, Mail, CreditCard } from 'lucide-react';
+import { Wallet, User, CreditCard } from 'lucide-react';
 
 const SignIn = () => {
   const [studentName, setStudentName] = useState('');
-  const [email, setEmail] = useState('');
   const { connected, connect, disconnect, account } = useWallet();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -46,10 +45,10 @@ const SignIn = () => {
   };
 
   const handleProceed = () => {
-    if (!studentName.trim() || !email.trim()) {
+    if (!studentName.trim()) {
       toast({
         title: "Missing Information",
-        description: "Please fill in all required fields.",
+        description: "Please enter your student name.",
         variant: "destructive",
       });
       return;
@@ -66,7 +65,6 @@ const SignIn = () => {
 
     // Store user info for later use
     localStorage.setItem('studentName', studentName);
-    localStorage.setItem('studentEmail', email);
     
     navigate('/home');
   };
@@ -96,15 +94,6 @@ const SignIn = () => {
               value={studentName}
               onChange={(e) => setStudentName(e.target.value)}
               icon={<User className="w-4 h-4" />}
-            />
-            
-            <EnhancedInput
-              label="Email Address"
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              icon={<Mail className="w-4 h-4" />}
             />
           </div>
 
@@ -152,7 +141,7 @@ const SignIn = () => {
             size="xl"
             className="w-full"
             onClick={handleProceed}
-            disabled={!connected || !studentName.trim() || !email.trim()}
+            disabled={!connected || !studentName.trim()}
           >
             Continue to Payment
           </EnhancedButton>
